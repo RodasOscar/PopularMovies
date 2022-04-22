@@ -7,18 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D94EC158281087C800D7A11E /* PopularTVShowsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94EC157281087C800D7A11E /* PopularTVShowsService.swift */; };
 		D999C8C02810391100E705A0 /* PopularMoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D999C8BF2810391100E705A0 /* PopularMoviesApp.swift */; };
 		D999C8C22810391100E705A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D999C8C12810391100E705A0 /* ContentView.swift */; };
 		D999C8C42810391300E705A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D999C8C32810391300E705A0 /* Assets.xcassets */; };
 		D999C8C72810391300E705A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D999C8C62810391300E705A0 /* Preview Assets.xcassets */; };
+		D9EE63BC28117ADB0025642C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D9EE63BB28117ADB0025642C /* Alamofire */; };
+		D9EE63BE28117B050025642C /* MoviesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EE63BD28117B050025642C /* MoviesProvider.swift */; };
+		D9EE63C2281181CE0025642C /* MoviesTvData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EE63C1281181CE0025642C /* MoviesTvData.swift */; };
+		D9EE63C52811CF9A0025642C /* DataDateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EE63C42811CF9A0025642C /* DataDateDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D94EC157281087C800D7A11E /* PopularTVShowsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTVShowsService.swift; sourceTree = "<group>"; };
 		D999C8BC2810391100E705A0 /* PopularMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D999C8BF2810391100E705A0 /* PopularMoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesApp.swift; sourceTree = "<group>"; };
 		D999C8C12810391100E705A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D999C8C32810391300E705A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D999C8C62810391300E705A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D9EE63BD28117B050025642C /* MoviesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesProvider.swift; sourceTree = "<group>"; };
+		D9EE63C1281181CE0025642C /* MoviesTvData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTvData.swift; sourceTree = "<group>"; };
+		D9EE63C42811CF9A0025642C /* DataDateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDateDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9EE63BC28117ADB0025642C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +61,12 @@
 		D999C8BE2810391100E705A0 /* PopularMovies */ = {
 			isa = PBXGroup;
 			children = (
-				D999C8BF2810391100E705A0 /* PopularMoviesApp.swift */,
-				D999C8C12810391100E705A0 /* ContentView.swift */,
+				D9EE63C62811DF0A0025642C /* Model */,
 				D999C8C32810391300E705A0 /* Assets.xcassets */,
+				D999C8C12810391100E705A0 /* ContentView.swift */,
+				D999C8BF2810391100E705A0 /* PopularMoviesApp.swift */,
+				D9EE63BF281181220025642C /* Network */,
+				D94EC157281087C800D7A11E /* PopularTVShowsService.swift */,
 				D999C8C52810391300E705A0 /* Preview Content */,
 			);
 			path = PopularMovies;
@@ -65,6 +78,39 @@
 				D999C8C62810391300E705A0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D9EE63BF281181220025642C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D9EE63C32811CF570025642C /* Decoder */,
+				D9EE63C02811814B0025642C /* Data */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D9EE63C02811814B0025642C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D9EE63BD28117B050025642C /* MoviesProvider.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D9EE63C32811CF570025642C /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				D9EE63C42811CF9A0025642C /* DataDateDecoder.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
+		D9EE63C62811DF0A0025642C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9EE63C1281181CE0025642C /* MoviesTvData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +129,9 @@
 			dependencies = (
 			);
 			name = PopularMovies;
+			packageProductDependencies = (
+				D9EE63BB28117ADB0025642C /* Alamofire */,
+			);
 			productName = PopularMovies;
 			productReference = D999C8BC2810391100E705A0 /* PopularMovies.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +160,9 @@
 				Base,
 			);
 			mainGroup = D999C8B32810391100E705A0;
+			packageReferences = (
+				D9EE63BA28117ADB0025642C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = D999C8BD2810391100E705A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D999C8C22810391100E705A0 /* ContentView.swift in Sources */,
+				D9EE63BE28117B050025642C /* MoviesProvider.swift in Sources */,
 				D999C8C02810391100E705A0 /* PopularMoviesApp.swift in Sources */,
+				D94EC158281087C800D7A11E /* PopularTVShowsService.swift in Sources */,
+				D9EE63C52811CF9A0025642C /* DataDateDecoder.swift in Sources */,
+				D9EE63C2281181CE0025642C /* MoviesTvData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +393,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D9EE63BA28117ADB0025642C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D9EE63BB28117ADB0025642C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9EE63BA28117ADB0025642C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D999C8B42810391100E705A0 /* Project object */;
 }
