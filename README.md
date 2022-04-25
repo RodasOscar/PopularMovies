@@ -3,11 +3,17 @@
 # Objetivos logrados de la versión V 2.0
 
 -🔴De la version numero 1.0 falta el paginado🔴
+
 -🔴Modo Offline en proceso🔴
+
 -🔴Multiidioma en proseso🔴
+
 -🟢La aplicación soporta Orientación vertical y horizontal🟢
+
 -🟢Soporta Darkmode y Lightmode🟢
+
 -🟢Uso de la api con la clave para realizar la aplicacion movil🟢
+
 >>>>>>> 56a1085 (Update README.md)
 
 ____________________________________________________________________________________
