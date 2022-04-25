@@ -13,20 +13,19 @@ final class MoviesProvider {
     static let share = MoviesProvider()
     
     private let restWebService = "https://api.themoviedb.org/3/tv/popular"
-    private let okStatusService = 200...300
+    private let okStatusService = 200...299
     
-    func getMovies (apKey:String){//, success: @escaping(_ responseGet: Success) -> (), failure: @escaping(_ error: Error?) -> () ){
+   // func getMovies (apKey:String){//, success: @escaping(_ responseGet: Success) -> (), failure: @escaping(_ error: Error?) -> () ){
         
-        let url = "\(restWebService)?api_key=\(apKey)"
+        /*   let url = "\(restWebService)?api_key=\(apKey)"
             
-        AF.request(url, method: .get).validate(statusCode: okStatusService).responseDecodable (of:MoviesTvResponse.self, decoder: DataDateDecoder()) { response in
+       AF.request(url, method: .get).validate(statusCode: okStatusService).responseDecodable (of:MoviesTvData.self, decoder: DataDateDecoder()) { response in
             
-            if let responseGet = response.value?.tvMovies {
+            if let responseGet = response.value?.total_results {
                 print(responseGet)
             } else{
                 print(Error.self)
             }
-        }
+        }*/
         
         }
-}
